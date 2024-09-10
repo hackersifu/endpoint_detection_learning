@@ -1,0 +1,8 @@
+<Sysmon schemaversion="4.90">
+  <EventFiltering>
+    <ProcessCreate onmatch="include">
+      <CommandLine condition="contains">systeminfo</CommandLine>
+      <CommandLine condition="contains">reg query HKLM\SYSTEM\CurrentControlSet\Services\Disk\Enum</CommandLine>
+    </ProcessCreate>
+  </EventFiltering>
+</Sysmon>
